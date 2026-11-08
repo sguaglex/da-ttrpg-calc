@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://84qly5unvwlv"]
+
+[ext_resource type="Script" uid="uid://b3hb4tmfmsw" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ban8uxbxpxnn1" path="res://value_edit.tscn" id="2_0xm2m"]
+
+[node name="MAIN" type="Panel" unique_id=345286334]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="Title" type="Label" parent="." unique_id=496279940]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.025
+anchor_right = 1.0
+anchor_bottom = 0.025
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9388413, 0, 0.093734585, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5019608)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 13
+theme_override_font_sizes/font_size = 30
+text = "Dragon Age TTRPG  Ability Calculator"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Character Area" type="HBoxContainer" parent="." unique_id=134322815]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -20.0
+offset_top = 72.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Character Name Edit" type="TextEdit" parent="Character Area" unique_id=1346303505]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+placeholder_text = "New Character"
+
+[node name="Save Button" type="Button" parent="Character Area" unique_id=735875454]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = " Save "
+
+[node name="Panel" type="Panel" parent="Character Area" unique_id=1313630634]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+
+[node name="Load Option Button" type="MenuButton" parent="Character Area/Panel" unique_id=407199568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Load / New"
+
+[node name="VSeparator" type="VSeparator" parent="Character Area" unique_id=1525077144]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="Delete Button" type="MenuButton" parent="Character Area" unique_id=71268584]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Delete
+"
+item_count = 1
+popup/item_0/text = "Confirm"
+popup/item_0/id = 0
+
+[node name="Level Area" type="HBoxContainer" parent="." unique_id=619411528]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.175
+anchor_right = 0.5
+anchor_bottom = 0.175
+offset_left = -233.0
+offset_right = 233.0
+offset_bottom = 32.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="\'Character Level\'" type="Label" parent="Level Area" unique_id=1642414063]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Character Level:"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Level Value Edit" parent="Level Area" unique_id=1392123860 instance=ExtResource("2_0xm2m")]
+layout_mode = 2
+min_value = 1
+
+[node name="VSeparator" type="VSeparator" parent="Level Area" unique_id=1401300013]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="\'Mode\'" type="Label" parent="Level Area" unique_id=1548396216]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Mode:"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Toggle Area" type="Panel" parent="Level Area" unique_id=61583567]
+self_modulate = Color(18.892, 18.892, 18.892, 1)
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="Level Area/Toggle Area" unique_id=1240700196]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 44.0
+grow_vertical = 2
+
+[node name="Mode Readout" type="Label" parent="Level Area" unique_id=142175801]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Rolled"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stat Editor Box" type="VBoxContainer" parent="." unique_id=39541438]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.3
+anchor_right = 0.8
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Point Tracker Area" type="Panel" parent="." unique_id=1241705296]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.875
+anchor_right = 0.5
+anchor_bottom = 0.975
+offset_left = -128.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Point Tracker Area" unique_id=537837963]
+modulate = Color(0, 0, 0, 0.5019608)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_right = 20.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 8
+text = "a thing by Sguaglex"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Point Tracker Area" unique_id=1116354548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PB Area" type="HBoxContainer" parent="Point Tracker Area/VBoxContainer" unique_id=451228158]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="\'Point Buy\'" type="Label" parent="Point Tracker Area/VBoxContainer/PB Area" unique_id=99533778]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Point Buy:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PB Readout" type="Label" parent="Point Tracker Area/VBoxContainer/PB Area" unique_id=166918379]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "0"
+
+[node name="\'of\'" type="Label" parent="Point Tracker Area/VBoxContainer/PB Area" unique_id=701515086]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "/"
+
+[node name="\'10\'" type="Label" parent="Point Tracker Area/VBoxContainer/PB Area" unique_id=1139048821]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "10"
+
+[node name="Adv Area" type="HBoxContainer" parent="Point Tracker Area/VBoxContainer" unique_id=2113328569]
+layout_mode = 2
+alignment = 1
+
+[node name="\'Advancement\'" type="Label" parent="Point Tracker Area/VBoxContainer/Adv Area" unique_id=1499799025]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Advancement:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spent Readout" type="Label" parent="Point Tracker Area/VBoxContainer/Adv Area" unique_id=835096976]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "0"
+
+[node name="\'of\'" type="Label" parent="Point Tracker Area/VBoxContainer/Adv Area" unique_id=1358044146]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "/"
+
+[node name="Total Readout" type="Label" parent="Point Tracker Area/VBoxContainer/Adv Area" unique_id=1189202660]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "0"
+
+[connection signal="text_changed" from="Character Area/Character Name Edit" to="." method="_on_character_name_edit_text_changed"]
+[connection signal="pressed" from="Character Area/Save Button" to="." method="_on_save_button_pressed"]
+[connection signal="value_set" from="Level Area/Level Value Edit" to="." method="_on_level_value_edit_set"]
+[connection signal="toggled" from="Level Area/Toggle Area/CheckButton" to="." method="_on_check_button_toggled"]

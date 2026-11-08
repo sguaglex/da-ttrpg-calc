@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ban8uxbxpxnn1"]
+
+[ext_resource type="Script" uid="uid://c7st8pmvxs2l1" path="res://value_edit.gd" id="1_nhub8"]
+
+[node name="ValueEdit" type="HBoxContainer" unique_id=1238349185]
+offset_right = 112.0
+offset_bottom = 31.0
+script = ExtResource("1_nhub8")
+metadata/_custom_type_script = "uid://c7st8pmvxs2l1"
+
+[node name="Minus Button" type="Button" parent="." unique_id=571728244]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+
+[node name="Value Input" type="TextEdit" parent="." unique_id=189278097]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 8
+
+[node name="Plus Button" type="Button" parent="." unique_id=652725702]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "+"
+
+[connection signal="pressed" from="Minus Button" to="." method="_on_minus_button_pressed"]
+[connection signal="text_changed" from="Value Input" to="." method="_on_value_input_text_changed"]
+[connection signal="pressed" from="Plus Button" to="." method="_on_plus_button_pressed"]

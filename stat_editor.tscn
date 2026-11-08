@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://ct60rni2luxve"]
+
+[ext_resource type="Script" uid="uid://q3ik846c4em3" path="res://stat_editor.gd" id="1_m5wjx"]
+[ext_resource type="PackedScene" uid="uid://ban8uxbxpxnn1" path="res://value_edit.tscn" id="2_1rqj3"]
+
+[node name="Stat Editor" type="HBoxContainer" unique_id=2093578569]
+custom_minimum_size = Vector2(0, 36)
+alignment = 1
+script = ExtResource("1_m5wjx")
+
+[node name="Name Readout" type="Panel" parent="." unique_id=682315338]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Name Readout" unique_id=321190018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Communication"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=736593414 groups=["Rolled"]]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="\'Roll\'" type="Panel" parent="." unique_id=1527057672 groups=["Rolled"]]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="\'Roll\'" unique_id=586707474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Roll:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Roll Value Edit" parent="." unique_id=1238349185 groups=["Rolled"] instance=ExtResource("2_1rqj3")]
+layout_mode = 2
+min_value = 3
+max_value = 18
+
+[node name="VSeparator2" type="VSeparator" parent="." unique_id=1579461511]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="\'Base\'" type="Panel" parent="." unique_id=1264996851]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="\'Base\'" unique_id=1742332611]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Base:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Base Val Readout" type="Panel" parent="." unique_id=576229789 groups=["Rolled"]]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Base Val Readout" unique_id=328508892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Base Value Edit" parent="." unique_id=1210084072 groups=["Point Buy"] instance=ExtResource("2_1rqj3")]
+visible = false
+layout_mode = 2
+max_value = 3
+
+[node name="VSeparator3" type="VSeparator" parent="." unique_id=1292001862]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="\'BG\'" type="Panel" parent="." unique_id=1928562652]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="\'BG\'" unique_id=1028357739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "BG:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BG Toggle" type="Panel" parent="." unique_id=39688581]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="BG Toggle" unique_id=307995843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSeparator4" type="VSeparator" parent="." unique_id=1586772334]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="\'Advancement\'" type="Panel" parent="." unique_id=335243872]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="\'Advancement\'" unique_id=431695709]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Advancement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Adv Value Edit" parent="." unique_id=1133609475 instance=ExtResource("2_1rqj3")]
+layout_mode = 2
+
+[node name="VSeparator5" type="VSeparator" parent="." unique_id=1979217745]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="\'Total\'" type="Panel" parent="." unique_id=1079732612]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="\'Total\'" unique_id=1577892769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Total:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Total Val Readout" type="Panel" parent="." unique_id=1613886828]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Total Val Readout" unique_id=846209211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="value_set" from="Roll Value Edit" to="." method="_on_roll_value_edit_set"]
+[connection signal="value_set" from="Base Value Edit" to="." method="_on_base_value_edit_set"]
+[connection signal="toggled" from="BG Toggle/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_set" from="Adv Value Edit" to="." method="_on_adv_value_edit_set"]
